@@ -16,7 +16,7 @@ from transformers import AutoModelForCausalLM, BitsAndBytesConfig
 
 from flwr.common.typing import NDArrays
 from unsloth import FastLanguageModel
-
+import os
 
 def cosine_annealing(
     current_round: int,
@@ -30,7 +30,7 @@ def cosine_annealing(
 
 
 def get_model(model_cfg: DictConfig):
-    access_token = "***REMOVED***"
+    access_token = os.getenv("HF_ACCESS_TOKEN")
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=model_cfg.name,
         load_in_4bit=model_cfg.quantization == 4,
