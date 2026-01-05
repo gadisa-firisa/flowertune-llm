@@ -42,16 +42,16 @@ llm-federated-finetune/
 - Contains the official evaluation scripts from **FlowerTune LLM Leaderboard** for the medical task category.
 
 ## Scores
-At the time of writing (over a year ago), the following results were achieved. They were not officially submitted to the leaderboard.
+At the time of writing (over a year ago), the following results were achieved using [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct). They were not officially submitted to the leaderboard.
 
-- PubMedQA: 0.68
-- MedMCQA: 0.44
-- MedQA: 0.57
-- CareQA: 0.52
-- Average: 0.55
+- PubMedQA: 68.00
+- MedMCQA: 48.24
+- MedQA: 57.34
+- CareQA: 57.62
+- Average: 57.8
 - Communication Cost: 6.0 GB
 
-Baseline reference scores at the time:
+Baseline reference scores from Flower team, using [Mistral-7B-Instruct-v0.3](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3):
 
 - PubMedQA: 59.00
 - MedMCQA: 23.69
